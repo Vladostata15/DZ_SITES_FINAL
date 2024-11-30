@@ -46,35 +46,4 @@ for product in products:
 
 
 
-incomeBig = 0
-gamesBig = 0
-foodBig = 0
-expBig = 0
-income = 1
-while True:
-    income = int(input("Enter your mont icome: "))
-    if income == 0:
-        break
-    incomeBig += income
-    games = int(input("Enter your expenses for games: "))
-    gamesBig += games
-    food = int(input("Enter your expenses for food: "))
-    foodBig+=food
-    expenses = games+food
-    expBig+=expenses
-    print("--------")
-
-
-
-gamesPer = (gamesBig/expBig)*100
-foodPer = (foodBig/expBig)*100
-print("\n\nEXPENSES SUMMARY\n-----------------------")
-print(f"Games expenses: {gamesBig} \nMonth percent: {round(gamesPer, 2)}%\n")
-print(f"Food expenses: {foodBig} \nMonth percent: {round(foodPer, 2)}%")
-res = abs(incomeBig-(gamesBig+foodBig))
-if (gamesBig+foodBig) > incomeBig:
-    print(f"\nYou owe: {res}")
-else:
-    print(f"\nMoney left: {res}")
-
 
